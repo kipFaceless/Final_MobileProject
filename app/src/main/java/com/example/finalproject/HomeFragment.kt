@@ -121,8 +121,14 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
 
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        imageView = view.findViewById(R.id.imageView)
+        btn = view.findViewById(R.id.activity_main_camera_button)
+        btn.setOnClickListener {
+            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
+        }
         val autoCompleteTextView = view.findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, medicines.map { it.name })
         autoCompleteTextView.setAdapter(adapter)
@@ -163,7 +169,11 @@ class HomeFragment : Fragment() {
         startActivity(intent)
     }
 
-
-
-
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == AppCompatActivity.RESULT_OK) {
+            val imageBitmap = data?.extras?.get("data") as Bitmap
+            imageView.setImageBitmap(imageBitmap)
+        }
+    }
 }
