@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/autocomplete_hint"
+        android:layout_marginHorizontal="@dimen/app_margin"
         android:inputType="textAutoComplete" />
 
 
@@ -21,27 +22,26 @@
         android:text="@string/not_found_message"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="16sp"
+        android:layout_marginHorizontal="@dimen/app_margin"
         android:layout_below="@id/autoCompleteTextView"
         android:layout_marginTop="8dp"/>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="350dp"
-        android:layout_height="564dp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="72dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <Button
         android:id="@+id/activity_main_camera_button"
         android:layout_width="196dp"
         android:layout_height="64dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="215dp"
+        android:layout_marginLeft="@dimen/app_margin"
         android:layout_marginBottom="12dp"
-        android:text="Open Camera"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="514dp" />
+        android:text="SCAN CODE"
+        android:layout_below="@+id/textViewNotFound"
+         />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
 
 </RelativeLayout>
