@@ -7,7 +7,7 @@ of the drug or Medicine to provide information about the drug such as dosage, si
 and so on. Additionally, the app can use maps to find nearby pharmacies that have the drug available.
 
 
-## lIGHT MODE UI
+## LIGHT MODE UI
 ![Light Mode UI](./readme_assets/Snap2023-07-09at23.56.57.jpg)
 
 ## DARK MODE UI
