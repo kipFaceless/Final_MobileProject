@@ -4,7 +4,20 @@
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <color name="teal_700">#356967</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--MY THEMES-->
+
+    <!-- LIGHT THEME  -->
+    <color name="Lht_Dark_green">#356967</color>
+    <color name="Lht_Light_green">#5CFA88</color>
+    <color name="Lht_White">#FFFFFF</color>
+
+    <!-- DARK THEME  -->
+    <color name="Drk_Dark_black">#191818</color>
+    <color name="Drk_light_black">#333030</color>
+    <color name="Drk_white">#FFFFFF</color>
+
 </resources>

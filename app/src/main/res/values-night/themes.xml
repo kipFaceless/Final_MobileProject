@@ -2,15 +2,36 @@
     <!-- Base application theme. -->
     <style name="Theme.FinalProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/Drk_Dark_black</item>
+        <item name="colorPrimaryVariant">@color/Drk_light_black</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/Drk_Dark_black</item>
+        <item name="colorSecondaryVariant">@color/Drk_Dark_black</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="BACKGROUND">
+        <item name="android:background">@color/Drk_light_black</item>
+    </style>
+    <style name="TEXTCOLOR">
+        <item name="android:textColor">@color/Drk_white</item>
+    </style>
+    <style name="BUTTON_TINT">
+        <item name="android:backgroundTint">@color/Drk_Dark_black</item>
+        <item name="android:textColor">@color/Drk_white</item>
+    </style>
+    <style name="TEXT_CONTENT_BACKGROUND">
+        <item name="android:background">@color/Drk_light_black</item>
+        <item name="android:textColor">@color/Drk_white</item>
+    </style>
+    <style name="ICON_COLOR_TINT">
+        <item name="android:tint">@color/Drk_white</item>
+    </style>
+    <style name="CARD_BACKGROUND">
+        <item name="android:backgroundTint">@color/Drk_Dark_black</item>
     </style>
 </resources>

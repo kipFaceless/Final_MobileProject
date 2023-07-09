@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_alignTop="@+id/bottom_navigation"
     android:layout_margin="@dimen/app_margin"
+    tools:ignore="UseSwitchCompatOrMaterialXml"
     tools:context=".MainActivity">
 
     <GridLayout
@@ -26,6 +27,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
+            style="@style/CARD_BACKGROUND"
             >
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -37,15 +39,17 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_home_24"
+                    android:src="@drawable/baseline_qr_code_24"
+                    style="@style/ICON_COLOR_TINT"
 
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="HOME"
+                    android:text="Generate Qr"
                     android:textStyle="bold"
                     android:textAlignment="center"
+                    style="@style/TEXTCOLOR"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -61,6 +65,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
+            style="@style/CARD_BACKGROUND"
             >
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -72,15 +77,16 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_home_24"
-
+                    android:src="@drawable/baseline_manage_accounts_24"
+                    style="@style/ICON_COLOR_TINT"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="HOME"
+                    android:text="Profile"
                     android:textStyle="bold"
                     android:textAlignment="center"
+                    style="@style/TEXTCOLOR"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -96,6 +102,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
+            style="@style/CARD_BACKGROUND"
             >
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -107,15 +114,17 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_home_24"
+                    android:src="@drawable/baseline_move_to_inbox_24"
+                    style="@style/ICON_COLOR_TINT"
 
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="HOME"
+                    android:text="Products"
                     android:textStyle="bold"
                     android:textAlignment="center"
+                    style="@style/TEXTCOLOR"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -130,6 +139,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
+            style="@style/CARD_BACKGROUND"
             >
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -141,15 +151,17 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_home_24"
+                    android:src="@drawable/baseline_pin_drop_24"
+                    style="@style/ICON_COLOR_TINT"
 
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="HOME"
+                    android:text="Pharmacies"
                     android:textStyle="bold"
                     android:textAlignment="center"
+                    style="@style/TEXTCOLOR"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -164,6 +176,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
+            style="@style/CARD_BACKGROUND"
             >
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -171,19 +184,23 @@
                 android:orientation="vertical"
                 android:gravity="center_horizontal|center_vertical"
                 android:layout_gravity="center"
+
                 >
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_home_24"
-
-                    />
+                    android:src="@drawable/baseline_add_card_24"
+                    tools:ignore="UseAppTint"
+                    style="@style/ICON_COLOR_TINT"
+                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="HOME"
+                    android:text="Add Card"
                     android:textStyle="bold"
                     android:textAlignment="center"
+                    style="@style/TEXTCOLOR"
+
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -198,6 +215,7 @@
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
+            style="@style/CARD_BACKGROUND"
             >
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -206,18 +224,22 @@
                 android:gravity="center_horizontal|center_vertical"
                 android:layout_gravity="center"
                 >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_home_24"
-
+                <Switch
+                    android:id="@+id/btnDarkMode"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintBaseline_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    style="@style/BUTTON_TINT"
                     />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="HOME"
+                    android:text="Dark/Light"
                     android:textStyle="bold"
                     android:textAlignment="center"
+                    style="@style/TEXTCOLOR"
                     />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

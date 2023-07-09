@@ -23,6 +23,7 @@
             android:textAppearance="?android:textAppearanceMedium"
             android:textStyle="bold"
             android:layout_weight="3"
+
             />
         <TextView
             android:id="@+id/textViewNearByPharmacies"
@@ -33,6 +34,7 @@
             android:text="         Nearby Pharmacies"
             android:layout_weight="1"
             android:textSize="12sp"
+            style="@style/TEXT_CONTENT_BACKGROUND"
             />
     </LinearLayout>
 
@@ -59,7 +61,9 @@
                 android:id="@+id/button_plus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description                                     +" />
+                android:text="Description                                     +"
+                style="@style/BUTTON_TINT"
+                />
 
             <TextView
                 android:id="@+id/textViewDescription"
@@ -69,13 +73,16 @@
                 android:foreground="@android:color/holo_orange_light"
                 android:foregroundTint="?android:attr/textColorHighlightInverse"
                 android:textSize="16sp"
-                tools:visibility="invisible" />
+                tools:visibility="invisible"
+                style="@style/TEXT_CONTENT_BACKGROUND"
+                />
 
             <Button
                 android:id="@+id/button_usage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Usage                                                +" />
+                android:text="Usage                                                +"
+                style="@style/BUTTON_TINT"/>
             <TextView
                 android:id="@+id/textViewUsage"
                 android:layout_width="match_parent"
@@ -84,13 +91,17 @@
                 android:foreground="@android:color/holo_orange_light"
                 android:foregroundTint="?android:attr/textColorHighlightInverse"
                 android:textSize="16sp"
-                tools:visibility="invisible" />
+                tools:visibility="invisible"
+                style="@style/TEXT_CONTENT_BACKGROUND"
+                />
 
             <Button
                 android:id="@+id/button_instructions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="INSTRUCTIONS                                    +" />
+                android:text="INSTRUCTIONS                                   +"
+                style="@style/BUTTON_TINT"
+                />
             <TextView
                 android:id="@+id/textViewInstructions"
                 android:layout_width="match_parent"
@@ -99,13 +110,17 @@
                 android:foreground="@android:color/holo_orange_light"
                 android:foregroundTint="?android:attr/textColorHighlightInverse"
                 android:textSize="16sp"
-                tools:visibility="invisible" />
+                tools:visibility="invisible"
+                style="@style/TEXT_CONTENT_BACKGROUND"
+                />
 
             <Button
                 android:id="@+id/button_side_effects"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SIDE EFFECTS                                     +" />
+                android:text="SIDE EFFECTS                                     +"
+                style="@style/BUTTON_TINT"
+                />
             <TextView
                 android:id="@+id/textViewSideEffects"
                 android:layout_width="match_parent"
@@ -114,7 +129,10 @@
                 android:foreground="@android:color/holo_orange_light"
                 android:foregroundTint="?android:attr/textColorHighlightInverse"
                 android:textSize="16sp"
-                tools:visibility="invisible" />
+                tools:visibility="invisible"
+                style="@style/TEXT_CONTENT_BACKGROUND"
+
+                />
 
         </LinearLayout>
     </ScrollView>
