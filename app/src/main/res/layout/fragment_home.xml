@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/BACKGROUND"
     tools:context=".HomeFragment">
 
     <AutoCompleteTextView
@@ -26,13 +27,14 @@
         android:layout_below="@id/autoCompleteTextView"
         android:layout_marginTop="8dp"/>
     <Button
-        android:id="@+id/activity_main_camera_button"
-        android:layout_width="196dp"
+        android:id="@+id/btn_scan"
+        android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:layout_marginLeft="@dimen/app_margin"
+        android:layout_marginHorizontal="@dimen/app_margin"
         android:layout_marginBottom="12dp"
         android:text="SCAN CODE"
         android:layout_below="@+id/textViewNotFound"
+        style="@style/BUTTON_TINT"
          />
 
     <ImageView
