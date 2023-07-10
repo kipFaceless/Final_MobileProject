@@ -1,4 +1,4 @@
-package com.example.finalproject
+package com.medicicineTrackingg.finalproject
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
