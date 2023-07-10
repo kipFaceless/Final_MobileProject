@@ -21,6 +21,7 @@ class SettingsFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
         btnDrk = view.findViewById(R.id.btnDarkMode)
+        // O código abaixo é para alternar Light/ Dark Mode
         btnDrk.setOnCheckedChangeListener { compoundButton, isChecked ->
             if (isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)

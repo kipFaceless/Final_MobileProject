@@ -24,10 +24,9 @@ import com.google.zxing.integration.android.IntentResult
 class HomeFragment : Fragment() {
 
     private lateinit var btnScan: Button
-    private lateinit var imageView: ImageView
     private lateinit var autoCompleteTextView: AutoCompleteTextView
 
-
+    //Pelo facto de não termos tempo suficiente, colocamos dados estáticos
     val medicines = arrayOf(
         Medicine(
             "Ibuprofen",
@@ -147,16 +146,20 @@ class HomeFragment : Fragment() {
     ): View? {
         activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        imageView = view.findViewById(R.id.imageView)
+
         btnScan = view.findViewById(R.id.btn_scan)
 
         btnScan.setOnClickListener {
             scanCode()
         }
+
+        // Usamos um autocompleview para uma pesquisa em tempo real( sem precisar de um clique
+        // para fazer a pesquisa
         autoCompleteTextView = view.findViewById<AutoCompleteTextView>(R.id.autoCompleteTextView)
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, medicines.map { it.name })
         autoCompleteTextView.setAdapter(adapter)
 
+        // Caso não exista o item pesquisado é apresentado o texto "Medicine not found"
         val textViewNotFound = view.findViewById<TextView>(R.id.textViewNotFound)
 
         autoCompleteTextView.setOnItemClickListener { _, _, position, _ ->
@@ -198,10 +201,12 @@ class HomeFragment : Fragment() {
     }
 
     private fun showResult(contents: String) {
-
+        // Após obter o resultado do QR code, atribuimos o texto no autoCompleteTextView para
+        // verificar a sua existência na base de dados
         autoCompleteTextView.setText(contents)
           }
 
+    //Para o scan do QR Code usamos como base o vídeo no que se encontra nesta url : https://www.youtube.com/watch?v=jtT60yFPelI&ab_channel=CamboTutorial
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         val result: IntentResult? =
             IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
@@ -214,6 +219,8 @@ class HomeFragment : Fragment() {
         }
     }
 
+
+    //O código abaixo abre a página de detalhes, caso exista o medicamento pesquisado
     private fun openDetailsActivity(medicine: Medicine) {
         val intent = Intent(requireContext(), DetailsActivity::class.java)
         intent.putExtra(DetailsActivity.EXTRA_MEDICINE, medicine)
