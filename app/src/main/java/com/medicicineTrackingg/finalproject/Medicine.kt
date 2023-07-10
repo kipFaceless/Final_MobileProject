@@ -1,4 +1,4 @@
-package com.example.finalproject
+package com.medicicineTrackingg.finalproject
 
 import android.os.Parcel
 import android.os.Parcelable
