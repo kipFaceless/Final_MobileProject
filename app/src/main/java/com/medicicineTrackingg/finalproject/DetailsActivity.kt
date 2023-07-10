@@ -12,9 +12,11 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 
 class DetailsActivity : AppCompatActivity() {
     companion object {
+        //Recebemos os parâmetros provenientes do HomeFragment
         const val EXTRA_MEDICINE = "extra_medicine"
     }
 
+    //Abaixo temos a lógica para fazer o dropdown funcionar
     private lateinit var textViewDescription: TextView
     private lateinit var textViewUsage: TextView
     private lateinit var textViewInstruction: TextView
